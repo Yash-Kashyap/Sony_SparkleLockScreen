@@ -18,13 +18,13 @@ No root, no accessibility service, no internet permission.
 - **Widgets**: swipe left/right on the clock for your widgets (music, weather, calendar…), "+" to
   add more.
 - **Lock & unlock sounds**: a click when the screen turns off, and another when the phone unlocks
-  (only with the ringer on; can be turned off).
+  (only with the ringer on; adjustable volume, can be turned off).
 - Haptics, current wallpaper / chosen image / built-in silk wallpaper, PIN & fingerprint hand-off,
   hidden navigation bar, Android 9 compatible rendering.
 
 ## Install & set up
 
-1. Install `release/SparkleLock-v1.1.apk`. If Play Protect says it doesn't recognise the app, tap
+1. Install `release/SparkleLock-v1.2.apk`. If Play Protect says it doesn't recognise the app, tap
    *More details → Install anyway*.
 2. Open **Sparkle Lock**, turn on **Enable sparkle lock screen**, and grant **Display over other apps**.
    On Android 15+, if it's greyed out: App info → ⋮ → *Allow restricted settings* first.

@@ -61,6 +61,7 @@
     <string name="slider_value">%1$s: %2$d%3$s</string>
     <string name="haptics">Haptic feedback</string>
     <string name="sounds">Lock &amp; unlock sounds</string>
+    <string name="sound_volume">Sound volume</string>
     <string name="haptics_hint">A light tick when you touch, a soft shimmer of ticks while you sweep fast, a rising click once you have swiped far enough, and a firm click on unlock. Follows your system “Touch feedback” setting. Lock/unlock sounds play only when your ringer is on (not silent/vibrate). If you hear double clicks, turn off Android’s own “Screen lock sound” in Sound settings.</string>
 
     <string name="tips">Good to know</string>
