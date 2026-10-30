@@ -60,7 +60,8 @@
     <string name="show_clock">Show the clock page</string>
     <string name="slider_value">%1$s: %2$d%3$s</string>
     <string name="haptics">Haptic feedback</string>
-    <string name="haptics_hint">A light tick when you touch, a soft shimmer of ticks while you sweep fast, a rising click once you have swiped far enough, and a firm click on unlock. Follows your system “Touch feedback” setting.</string>
+    <string name="sounds">Lock &amp; unlock sounds</string>
+    <string name="haptics_hint">A light tick when you touch, a soft shimmer of ticks while you sweep fast, a rising click once you have swiped far enough, and a firm click on unlock. Follows your system “Touch feedback” setting. Lock/unlock sounds play only when your ringer is on (not silent/vibrate). If you hear double clicks, turn off Android’s own “Screen lock sound” in Sound settings.</string>
 
     <string name="tips">Good to know</string>
     <string name="tips_body">• Touch and hold anywhere: fairy dust gathers around your finger and the wallpaper slowly flows through every colour. Nothing unlocks while your finger is down.\n• Swipe far enough and let go to unlock.\n• Swipe up from the camera icon (bottom right) to open the camera, even when locked.\n• Best experience: set your system screen lock to Swipe or None, or use fingerprint / face unlock.\n• With a PIN or pattern, the system asks for it after the unlock animation.\n• Android does not let normal apps replace the system lock screen itself, so this app shows its own screen above it. The phone stays exactly as secure as before.\n• The app has no internet permission and no accessibility service.</string>

@@ -42,6 +42,7 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
     private boolean preview;
     private boolean finishing;
     private boolean handOffPending, handingOff;
+    private boolean unlockSoundPlayed;
     private int bottomInset;
     private Bitmap currentScene;
     private WidgetPager pager;
@@ -61,6 +62,7 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
                 saveHue();
                 effect.resetToLocked();
             } else if (Intent.ACTION_USER_PRESENT.equals(intent.getAction()) && handingOff) {
+                unlockSound();
                 finishQuietly(); // unlocked via the system UI
             }
         }
@@ -113,6 +115,7 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
         hideNavigation(); // after setContentView: the window's decor must exist
         applyPrefs();
         buildPages();
+        Sounds.init(this);
 
         IntentFilter sf = new IntentFilter(Intent.ACTION_SCREEN_OFF);
         sf.addAction(Intent.ACTION_USER_PRESENT);
@@ -127,6 +130,7 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
         finishing = false;
         handOffPending = false;
         handingOff = false;
+        unlockSoundPlayed = false;
         handler.removeCallbacksAndMessages(null);
         setShowWhenLocked(true);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
@@ -347,6 +351,7 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
         if (!locked) {
             // Already unlocked (e.g. fingerprint while the screen was off): open straight away.
             finishing = true;
+            unlockSound();
             effect.startReveal(true);
             return;
         }
@@ -367,6 +372,7 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
             effect.startReveal(false);
             km.requestDismissKeyguard(this, new KeyguardManager.KeyguardDismissCallback() {
                 @Override public void onDismissSucceeded() {
+                    unlockSound();
                     // Give the system keyguard a moment to leave (Android 9 animates it).
                     handler.postDelayed(effect::setBackdropClear, 120);
                 }
@@ -403,7 +409,10 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
             return;
         }
         km.requestDismissKeyguard(this, new KeyguardManager.KeyguardDismissCallback() {
-            @Override public void onDismissSucceeded() { finishQuietly(); }
+            @Override public void onDismissSucceeded() {
+                unlockSound();
+                finishQuietly();
+            }
             @Override public void onDismissCancelled() { finishQuietly(); }
             @Override public void onDismissError() { finishQuietly(); }
         });
@@ -417,6 +426,13 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
     private void saveHue() {
         Prefs p = new Prefs(this);
         if (p.keepColor()) p.setHue(effect.getHue());
+    }
+
+    /** The unlock click, once per unlock. */
+    private void unlockSound() {
+        if (unlockSoundPlayed) return;
+        unlockSoundPlayed = true;
+        Sounds.playUnlock(this);
     }
 
     private void finishQuietly() {
