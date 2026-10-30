@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sparkle Lock</string>
+    <string name="tagline">The Xperia Z2 “fairy dust” lock screen, with colours that flow while you hold. On modern Android.</string>
+    <string name="swipe_to_unlock">Swipe to unlock</string>
+
+    <string name="enable">Enable sparkle lock screen</string>
+    <string name="enable_hint">When the screen turns off, the sparkle lock screen is placed on top of the system one. Touch and hold to play, then swipe and let go to unlock. Your PIN, pattern or fingerprint still apply.</string>
+    <string name="try_it">Try the effect</string>
+
+    <string name="permissions">Permissions</string>
+    <string name="perm_overlay">Display over other apps</string>
+    <string name="perm_overlay_hint">Needed on Android 10+ so the lock screen can appear when the screen turns off.</string>
+    <string name="perm_battery">Unrestricted battery</string>
+    <string name="perm_battery_hint">Stops the system from killing the app in the background.</string>
+    <string name="perm_notif">Notifications</string>
+    <string name="perm_notif_hint">Optional. Shows the silent “active” notification.</string>
+    <string name="grant">Grant</string>
+    <string name="granted">✓ Granted</string>
+    <string name="granted_short">Granted</string>
+    <string name="continue_">Continue</string>
+    <string name="required">Required</string>
+    <string name="recommended">Recommended</string>
+    <string name="open_app_info">Open app info</string>
+    <string name="app_info_hint">Android 15+: if “Display over other apps” is greyed out, open App info → ⋮ menu → “Allow restricted settings”, then grant it. Xiaomi / Oppo / Vivo: also allow “Show on lock screen” and “Open new windows while running in background” under Other permissions.</string>
+    <string name="need_overlay_toast">Allow “Display over other apps” for Sparkle Lock</string>
+
+    <string name="wallpaper">Lock screen wallpaper</string>
+    <string name="use_current">Use current wallpaper</string>
+    <string name="choose_image">Choose image</string>
+    <string name="src_current">Using: your current wallpaper (auto-updates)</string>
+    <string name="src_picked">Using: chosen image</string>
+    <string name="src_default">Using: default Xperia-style silk</string>
+    <string name="current_wp_explain">Android only lets apps read your wallpaper with “Files and media” access. Sparkle Lock uses it just to copy your wallpaper.</string>
+    <string name="current_wp_explain_33">On Android 13 and newer, Android only lets apps read your wallpaper with “All files access”.\n\nSparkle Lock uses it only to copy your lock-screen wallpaper, and keeps it in sync when you change wallpaper. The app has no internet access.\n\nIf you’d rather not grant it, use “Choose image” and pick the same photo instead.</string>
+    <string name="current_wp_failed">Couldn’t read the current wallpaper. Try “Choose image” instead.</string>
+    <string name="use_default">Use default (silk)</string>
+    <string name="wallpaper_hint">“Use current wallpaper” copies your lock-screen wallpaper (or home wallpaper if there isn’t a separate one). Live and video wallpapers can’t be copied.</string>
+    <string name="saving_wallpaper">Saving wallpaper…</string>
+    <string name="wallpaper_failed">Couldn’t load that image</string>
+
+    <string name="effect">Effect</string>
+    <string name="sparkle_amount">Sparkle amount</string>
+    <string name="widgets_header">Lock screen widgets</string>
+    <string name="widgets_body">Swipe left or right on the clock to flip between widgets. The last page is “+” to add more. Any widget your apps offer works: music controls, weather, calendar, clocks, notes, and more.</string>
+    <string name="widgets_none">No widgets yet. Only the clock is shown.</string>
+    <string name="widgets_none_installed">None of your apps offer widgets.</string>
+    <string name="add_widget">Add widget</string>
+    <string name="choose_widget">Choose a widget</string>
+    <string name="remove">Remove</string>
+    <string name="widget_added">Widget added to the lock screen</string>
+    <string name="widget_failed">Couldn’t add that widget</string>
+    <string name="hue_speed">Colour shift speed</string>
+    <string name="secure_header">PIN / pattern</string>
+    <string name="secure_yes">Your phone uses a PIN, pattern or password.</string>
+    <string name="secure_no">No PIN/pattern: swiping unlocks straight to your home screen.</string>
+    <string name="secure_body">No app can skip your PIN. That is what keeps your phone safe. You can still get “swipe and you’re in” almost every time:\n\n• <b>Fingerprint while the screen is off</b> (Samsung: Fingerprints → “Fingerprint always on”). Touch the sensor to wake the phone. It is already unlocked, so one swipe takes you straight to your home screen.\n• <b>Face recognition</b>: after you swipe, the system checks your face and continues without asking for the PIN.\n• <b>Smart Lock / Extend Unlock</b> (trusted places, your watch or earbuds): while trusted, swiping unlocks directly. Sparkle Lock detects this automatically.\n• <b>Lock automatically after…</b> (Samsung: Lock screen → Secure lock settings): no PIN if the screen was only off for a short time.\n\nThe PIN is then only asked occasionally, as Android requires.</string>
+    <string name="open_lock_settings">Open lock screen settings</string>
+    <string name="unlock_distance">Unlock swipe distance</string>
+    <string name="show_clock">Show the clock page</string>
+    <string name="slider_value">%1$s: %2$d%3$s</string>
+    <string name="haptics">Haptic feedback</string>
+    <string name="haptics_hint">A light tick when you touch, a soft shimmer of ticks while you sweep fast, a rising click once you have swiped far enough, and a firm click on unlock. Follows your system “Touch feedback” setting.</string>
+
+    <string name="tips">Good to know</string>
+    <string name="tips_body">• Touch and hold anywhere: fairy dust gathers around your finger and the wallpaper slowly flows through every colour. Nothing unlocks while your finger is down.\n• Swipe far enough and let go to unlock.\n• Swipe up from the camera icon (bottom right) to open the camera, even when locked.\n• Best experience: set your system screen lock to Swipe or None, or use fingerprint / face unlock.\n• With a PIN or pattern, the system asks for it after the unlock animation.\n• Android does not let normal apps replace the system lock screen itself, so this app shows its own screen above it. The phone stays exactly as secure as before.\n• The app has no internet permission and no accessibility service.</string>
+
+    <string name="notif_channel">Lock screen service</string>
+    <string name="notif_title">Sparkle lock screen is active</string>
+    <string name="notif_text">Tap to change settings</string>
+    <string name="color_shift">Shift colours while holding</string>
+    <string name="keep_color">Keep the colour for next time</string>
+    <string name="camera_shortcut">Camera shortcut (swipe up from the icon)</string>
+</resources>
