@@ -24,7 +24,7 @@ No root, no accessibility service, no internet permission.
 
 ## Install & set up
 
-1. Install `release/SparkleLock-v1.2.apk`. If Play Protect says it doesn't recognise the app, tap
+1. Install `release/SparkleLock-v1.3.apk`. If Play Protect says it doesn't recognise the app, tap
    *More details → Install anyway*.
 2. Open **Sparkle Lock**, turn on **Enable sparkle lock screen**, and grant **Display over other apps**.
    On Android 15+, if it's greyed out: App info → ⋮ → *Allow restricted settings* first.

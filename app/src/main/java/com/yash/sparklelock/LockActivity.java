@@ -339,6 +339,11 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
     // ------------------------------------------------------------------ unlock flow
 
     @Override
+    public void onEffectTouchDown() {
+        Sounds.warm(this);
+    }
+
+    @Override
     public void onUnlockGesture() {
         if (finishing) return;
         if (haptics != null) haptics.unlock();
@@ -370,9 +375,11 @@ public class LockActivity extends Activity implements SparkleView.Listener, Widg
             // Swipe / None / trusted: dismiss directly; fade once the keyguard has gone.
             finishing = true;
             effect.startReveal(false);
+            // No credential needed, so the unlock is certain: click right on the gesture
+            // instead of waiting for Android's dismiss reply (that reply arrives late).
+            unlockSound();
             km.requestDismissKeyguard(this, new KeyguardManager.KeyguardDismissCallback() {
                 @Override public void onDismissSucceeded() {
-                    unlockSound();
                     // Give the system keyguard a moment to leave (Android 9 animates it).
                     handler.postDelayed(effect::setBackdropClear, 120);
                 }
